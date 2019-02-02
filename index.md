@@ -13,3 +13,9 @@
 |withArgs|getArgsに値をセットする|
 |withProgName|getProgNameに値をセットする|
 |getEnvironment|環境変数を返す|
+
+egWithArgs :: IO()
+egWithArgs = withArgs args $ do
+  print =<< getArgs
+  where
+    args = ["hello", "world"]
